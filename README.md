@@ -49,3 +49,19 @@ npm run start
 ```
 
 > notes: or you can run it in background, you can use pm2. PM2 is a daemon process manager that will help you manage and keep your application online 24/7
+
+### Documentation
+
+## C4 Diagram
+
+![C4 Diagram Context](./docs/img/C4%20Diagram.jpg)
+
+## Sequence Diagram For Get Countries
+
+![Sequence Diagram For Get Countries](./docs/img/Get%20Countries%20-%20Sequence%20Diagram.jpg)
+
+## Sequence Diagram For Get Country
+
+![Sequence Diagram For Get Country](./docs/img/Get%20Country%20-%20Sequence%20Diagram.jpg)
+
+## Swagger Open API

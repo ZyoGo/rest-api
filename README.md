@@ -66,4 +66,4 @@ npm run start
 
 ### Swagger Open API
 
-[Link Swagger](https://bump.sh/zyogo/doc/country-rest-api) or can access from folder `docs/swagger/swagger.yaml`
+<a href="https://bump.sh/zyogo/doc/country-rest-api" target="_blank">Link Swagger</a> or can access from folder `docs/swagger/swagger.yaml`

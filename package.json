@@ -1,0 +1,40 @@
+{
+  "name": "nolimit-test-be",
+  "version": "1.0.0",
+  "description": "Simple REST API ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "ts-node -r tsconfig-paths/register dist/cmd/index.js",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZyoGo/rest-api.git"
+  },
+  "author": "Harly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZyoGo/rest-api/issues"
+  },
+  "homepage": "https://github.com/ZyoGo/rest-api#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.18",
+    "@types/jest": "^29.5.5",
+    "@types/node": "^20.8.3",
+    "express": "^4.18.2",
+    "jest": "^29.7.0",
+    "nodemo": "^1.0.0",
+    "prettier": "^3.0.3",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1"
+  }
+}

@@ -1,0 +1,151 @@
+openapi: 3.0.3
+info:
+  title: Swagger Country REST API
+  description: |-
+    This is simple Country REST API. User can get all country and also can get detail from country.
+    This Service/REST API call to another service GraphQL (countries.trevorblades.com/graphql) and convert to rest api
+  contact:
+    email: harlyywinata@gmail.com
+  version: 1.0.0
+servers:
+  - url: localhost:4001
+tags:
+  - name: country
+    description: Context for country
+paths:
+  /countries:
+    get:
+      tags:
+        - country
+      summary: Get Countries
+      description: Get all country
+      operationId: getCountries
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      countries:
+                        type: array
+                        description: list of country
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: Andorra
+                            languages:
+                              type: array
+                              description: list of languages that country has
+                              items:
+                                type: string
+                                example: Catalan
+        '404':
+          description: country not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Country not found
+        '500':
+          description: internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Failed to get country: internal server error"
+  /country/{id}:
+    get:
+      tags:
+        - country
+      summary: Get Country By Id / Code Country
+      description: Get detail Country based on Code Country (ISO 3166-1 alpha-2)
+      operationId: getCountryById
+      parameters:
+        - name: id
+          in: path
+          description: ID/Code Country based on ISO 3166-1 alpha-2
+          required: true
+          schema:
+            type: string
+            format: 2 character
+      responses:
+        '200':
+          description: successful get country by id/code
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  awsRegion:
+                    type: string
+                    example: me-south-1
+                  capital:
+                    type: string
+                    example: Abu Dhabi
+                  code:
+                    type: string
+                    example: AE
+                    format: ISO 3166-1 alpha-2
+                  currencies:
+                    type: array
+                    description: list of currency that country has
+                    items:
+                      type: string
+                      example: AED
+                  currency:
+                    type: string
+                    example: AE
+                  emoji:
+                    type: string
+                    example: 🇦🇪
+                  emojiU:
+                    type: string
+                    example: U+1F1E6 U+1F1EA
+                  name:
+                    type: string
+                    example: United Arab Emirates
+                  native:
+                    type: string
+                    example: دولة الإمارات العربية المتحدة
+                  phone:
+                    type: string
+                    example: 971
+                  phones:
+                    type: array
+                    items:
+                      type: string
+                      example: 971
+        '404':
+          description: country not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Country not found
+        # '500':
+        #   description: internal server error
+        #   content:
+        #     application/json:
+        #       schema:
+        #         type: object
+        #         properties:
+        #           error:
+        #             type: string
+        #             example: "Failed to get country: internal server error"
+      

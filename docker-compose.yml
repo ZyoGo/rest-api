@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  country-service:
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    ports:
+      - 4001:4001
+    networks:
+      - country-network
+networks:
+  country-network:
+    driver: bridge

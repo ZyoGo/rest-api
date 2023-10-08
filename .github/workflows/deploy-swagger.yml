@@ -1,0 +1,26 @@
+name: Deploy Swagger Country REST API
+
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/swagger/swagger.yaml'
+
+jobs:
+  deploy-bump:
+    name: Deploy API doc on Bump
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Deploy API documentation
+        uses: bump-sh/github-action@v1
+        with:
+          doc: ${{secrets.DOC_ID}}
+          token: ${{secrets.BUMP_TOKEN}}
+          file: docs/swagger/swagger.yaml

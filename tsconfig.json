@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "src",
+    "paths": {
+      "@core/*": ["core/*"],
+      "@config/*": ["config/*"],
+      "@business/*": ["business/*"],
+      "@driven/*": ["driven/*"],
+      "@http/*": ["driving/api/http/*"],
+      "@response/*": ["driving/api/http/response/*"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}

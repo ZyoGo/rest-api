@@ -138,14 +138,14 @@ paths:
                   error:
                     type: string
                     example: Country not found
-        # '500':
-        #   description: internal server error
-        #   content:
-        #     application/json:
-        #       schema:
-        #         type: object
-        #         properties:
-        #           error:
-        #             type: string
-        #             example: "Failed to get country: internal server error"
+        '500':
+          description: internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Failed to get country: internal server error"
       

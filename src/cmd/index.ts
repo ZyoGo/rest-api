@@ -22,13 +22,11 @@ const countryController: CountryController = new CountryController(
 const app = express();
 app.use('/', countryController.getRouter());
 app.get('/health', (req: Request, res: Response) => {
-  // You can add additional health checks here
   const healthStatus = {
     status: 'ok',
     message: 'Application is healthy'
   };
 
-  // Respond with a JSON object indicating the health status
   res.status(200).json(healthStatus);
 });
 

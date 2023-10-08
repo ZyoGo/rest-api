@@ -25,7 +25,7 @@ export class CountryController {
         (coreCountry) => ({
           ...coreCountry,
           languages:
-            coreCountry.languages?.map((language) => language.name) || [] // Map languages to an array of strings
+            coreCountry.languages?.map((language) => language.name) || []
         })
       );
 

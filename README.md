@@ -79,5 +79,5 @@ curl --location 'http://localhost:4001/countries'
 2. Hit endpoint for get detail country, try to get detail country for US:
 
 ```
-http://localhost:4001/country/us
+curl --location 'http://localhost:4001/country/us'
 ```

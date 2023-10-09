@@ -67,3 +67,17 @@ npm run start
 ### Swagger Open API
 
 <a href="https://bump.sh/zyogo/doc/country-rest-api" target="_blank">Link Swagger</a> or can access from folder `docs/swagger/swagger.yaml`
+
+## Try to hit endpoint
+
+1. Hit endpoint for get countries:
+
+```
+curl --location 'http://localhost:4001/countries'
+```
+
+2. Hit endpoint for get detail country, try to get detail country for US:
+
+```
+http://localhost:4001/country/us
+```

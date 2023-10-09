@@ -1,6 +1,6 @@
 ## Country REST API
 
-this is simple REST API for get country from https://countries.trevorblades.com (graphQL).
+This is simple REST API for get country from https://countries.trevorblades.com (graphQL). This service implement [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) with [Hexagonal Architecture](<https://en.wikipedia.org/wiki/Hexagonal_architecture_(software)>)
 
 ## How to run REST API with development mode
 
